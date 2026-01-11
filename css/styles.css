@@ -1,0 +1,141 @@
+/* Components  */
+.btn {
+    background-color: var(--clr-primary-base);
+    color: var(--white);
+    padding: var(--sp-100) var(--sp-150);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    border: transparent;
+    font-weight: var(--fw-600);
+    transform: 0.3s ease-in-out;
+}
+
+.btn:hover,.btn:focus,.btn:focus-within {
+    background-color: var(--primary-400);
+    border-radius: var(--radius-lg);
+}
+.btn:focus,.btn:focus-within {
+    border: 5px solid var(--info-400);
+}
+
+.link {
+    display: grid;
+    gap: calc(var(--grid-gap) / 2);
+    position: relative;
+}
+
+.link > * {
+    place-self: start;
+}
+.link__title {
+    font-size: var(--fs-h4);
+}
+.link__link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+/* Hero */
+.hero {
+    padding-block: calc(var(--section-padding-xl) * 2);
+}
+
+.hero__grid {
+    display: grid;
+    grid-template-columns: var(--grid-2);
+    gap: var(--grid-gap);
+    align-items: center;
+}
+
+.hero__content  > * {
+    place-self: start;
+}
+
+/* Video  */
+.vid {
+    background-color: var(--primary-100);
+    color: var(--white);
+}
+
+.vid >.container {
+    display: grid;
+    gap: var(--grid-gap);
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.vid__lead  {
+    margin: auto;
+}
+.vid__player {
+    margin: auto;
+}
+
+.vid__btn {
+    place-self: anchor-center;
+}
+
+/* Links */
+.links {
+    background-color: var(--surface-900);
+}
+
+.links__heading {
+    text-align: center;
+}
+.links > .container {
+    display: grid;
+    gap: calc(var(--grid-gap) * 1.5);
+}
+.link-grid {
+    display: grid;
+    grid-template-columns: var(--grid-3);
+    gap: var(--grid-gap);
+}
+
+.link:nth-child(4) {
+    grid-row: 2;
+    grid-column-start: -1;
+    grid-column-end: -2;
+}
+
+/* Benefits */
+.benefits > .container {
+    display: grid;
+    gap: var(--grid-gap);
+}
+
+.benefits__title {
+    text-align: center;
+}
+
+.benefits__listing {
+    display: grid;
+    gap: calc(var(--grid-gap) * 2);
+}
+/* benefit specific styling - should probably be under components, and made into a frame, but there's nowhere else that requires this layout, so I don't feel bad  */
+.benefit {
+    display: grid;
+    grid-template-columns: var(--grid-2);
+    gap: var(--grid-gap);
+}
+.benefit__text {
+   display: flex;
+   flex-direction: column;
+   gap: var(--content-gap);
+   justify-content: center;
+}
+
+.benefit:nth-child(even) > .benefit__image {
+    order: -1;
+}
+
+/* Footer */
+.site-footer {
+    padding: var(--section-padding-sm);
+    background-color: var(--primary-100);
+    color: var(--white);
+    text-align: center;
+}

@@ -1,0 +1,135 @@
+/* Import utilities  */
+@import url(utils.css);
+
+/* Universal selector reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: var(--ff-body);
+}
+
+/* Body Tag Defaults */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100vh;
+  color: var(--text-color);
+  background-color: var(--body-color);
+}
+
+/* Removing Bottom Margins from elements */
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+
+/* Removing Margin on various elements */
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+/* Line heights  */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-headings);
+  line-height: var(--lh-headings);
+}
+p {
+  line-height: var(--lh-p);
+}
+/* Font Sizes */
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+h5 { font-size: var(--fs-h5); }
+h6 { font-size: var(--fs-h6); }
+
+/* Paragraph Styles */
+p,
+li,
+figcaption {
+  max-width: 75ch;
+}
+
+/* List styles */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  margin: 0px;
+}
+/* Default section padding */
+section {
+  padding-block: var(--section-padding-md);
+}
+
+/* Link defaults  */
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+/* Images */
+img,
+svg,
+video,
+figure,
+figcaption,
+picture {
+  display: block;
+  border-radius: 8px;
+  max-width: 100%;
+  block-size: auto;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}

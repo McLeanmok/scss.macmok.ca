@@ -1,0 +1,381 @@
+/* Importing Google font - you really want to swap this out to suit your needs. I would strongly recommend using @font-face and load the fonts in locally, I'm using the CDN just for the sake of convenience */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,100..900;1,100..900&display=swap');
+/* Varibles */
+:root {
+  /* =====
+  COLOURS
+  ===== */
+
+  /* Site Colours */
+  /* Primary */
+  --primary-hue: 265;
+  --primary-saturation: 33;
+  --primary-lightness: 25;
+  --primary-hsl: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+
+  --clr-primary-base: var(--primary-hsl);
+  --primary-100: hsl(var(--primary-hue) var(--primary-saturation) 10%);
+  --primary-200: hsl(var(--primary-hue) var(--primary-saturation) 20%);
+  --primary-300: hsl(var(--primary-hue) var(--primary-saturation) 30%);
+  --primary-400: hsl(var(--primary-hue) var(--primary-saturation) 40%);
+  --primary-500: hsl(var(--primary-hue) var(--primary-saturation) 50%);
+  --primary-600: hsl(var(--primary-hue) var(--primary-saturation) 60%);
+  --primary-700: hsl(var(--primary-hue) var(--primary-saturation) 70%);
+  --primary-800: hsl(var(--primary-hue) var(--primary-saturation) 80%);
+  --primary-900: hsl(var(--primary-hue) var(--primary-saturation) 90%);
+  
+  /* Secondary */
+  --seccondary-hue: 219;
+  --seccondary-saturation: 49;
+  --seccondary-lightness: 34;
+  --seccondary-hsl: hsl(var(--seccondary-hue) var(--seccondary-saturation) var(--seccondary-lightness));
+
+  --clr-seccondary-base:: var(--seccondary-hsl);
+  --seccondary-100: hsl(var(--seccondary-hue) var(--seccondary-saturation) 10%);
+  --seccondary-200: hsl(var(--seccondary-hue) var(--seccondary-saturation) 20%);
+  --seccondary-300: hsl(var(--seccondary-hue) var(--seccondary-saturation) 30%);
+  --seccondary-400: hsl(var(--seccondary-hue) var(--seccondary-saturation) 40%);
+  --seccondary-500: hsl(var(--seccondary-hue) var(--seccondary-saturation) 50%);
+  --seccondary-600: hsl(var(--seccondary-hue) var(--seccondary-saturation) 60%);
+  --seccondary-700: hsl(var(--seccondary-hue) var(--seccondary-saturation) 70%);
+  --seccondary-800: hsl(var(--seccondary-hue) var(--seccondary-saturation) 80%);
+  --seccondary-900: hsl(var(--seccondary-hue) var(--seccondary-saturation) 90%);
+  
+  /* Tertiary */
+  --tertiary-hue: 88;
+  --tertiary-saturation: 36;
+  --tertiary-lightness: 72;
+  --tertiary-hsl: hsl(var(--tertiary-hue) var(--tertiary-saturation) var(--tertiary-lightness));
+
+  --clr-tertiary-base:: var(--tertiary-hsl);
+  --tertiary-100: hsl(var(--tertiary-hue) var(--tertiary-saturation) 10%);
+  --tertiary-200: hsl(var(--tertiary-hue) var(--tertiary-saturation) 20%);
+  --tertiary-300: hsl(var(--tertiary-hue) var(--tertiary-saturation) 30%);
+  --tertiary-400: hsl(var(--tertiary-hue) var(--tertiary-saturation) 40%);
+  --tertiary-500: hsl(var(--tertiary-hue) var(--tertiary-saturation) 50%);
+  --tertiary-600: hsl(var(--tertiary-hue) var(--tertiary-saturation) 60%);
+  --tertiary-700: hsl(var(--tertiary-hue) var(--tertiary-saturation) 70%);
+  --tertiary-800: hsl(var(--tertiary-hue) var(--tertiary-saturation) 80%);
+  --tertiary-900: hsl(var(--tertiary-hue) var(--tertiary-saturation) 90%);
+
+   /* Surface */
+   --surface-hue: 221;
+   --surface-saturation: 114;
+   --surface-lightness: 56;
+   --surface-hsl: hsl(var(--surface-hue) var(--surface-saturation) var(--surface-lightness));
+ 
+   --clr-surface-base:: var(--surface-hsl);
+   --surface-100: hsl(var(--surface-hue) var(--surface-saturation) 10%);
+   --surface-200: hsl(var(--surface-hue) var(--surface-saturation) 20%);
+   --surface-300: hsl(var(--surface-hue) var(--surface-saturation) 30%);
+   --surface-400: hsl(var(--surface-hue) var(--surface-saturation) 40%);
+   --surface-500: hsl(var(--surface-hue) var(--surface-saturation) 50%);
+   --surface-600: hsl(var(--surface-hue) var(--surface-saturation) 60%);
+   --surface-700: hsl(var(--surface-hue) var(--surface-saturation) 70%);
+   --surface-800: hsl(var(--surface-hue) var(--surface-saturation) 80%);
+   --surface-900: hsl(var(--surface-hue) var(--surface-saturation) 90%);
+
+   /* Accent */
+    --accent-hue: 94;
+    --accent-saturation: 78;
+    --accent-lightness: 82;
+   --accent-hsl: hsl(var(--accent-hue) var(--accent-saturation) var(--accent-lightness));
+ 
+   --clr-accent-base:: var(--accent-hsl);
+   --accent-100: hsl(var(--accent-hue) var(--accent-saturation) 10%);
+   --accent-200: hsl(var(--accent-hue) var(--accent-saturation) 20%);
+   --accent-300: hsl(var(--accent-hue) var(--accent-saturation) 30%);
+   --accent-400: hsl(var(--accent-hue) var(--accent-saturation) 40%);
+   --accent-500: hsl(var(--accent-hue) var(--accent-saturation) 50%);
+   --accent-600: hsl(var(--accent-hue) var(--accent-saturation) 60%);
+   --accent-700: hsl(var(--accent-hue) var(--accent-saturation) 70%);
+   --accent-800: hsl(var(--accent-hue) var(--accent-saturation) 80%);
+   --accent-900: hsl(var(--accent-hue) var(--accent-saturation) 90%);
+
+  /* Contextual Colours  */
+  
+   /* Info */
+   --info-hue: 183;
+   --info-saturation: 100;
+   --info-lightness: 73;
+   --info-hsl: hsl(var(--info-hue) var(--info-saturation) var(--info-lightness));
+ 
+   --clr-info-base:: var(--info-hsl);
+   --info-100: hsl(var(--info-hue) var(--info-saturation) 10%);
+   --info-200: hsl(var(--info-hue) var(--info-saturation) 20%);
+   --info-300: hsl(var(--info-hue) var(--info-saturation) 30%);
+   --info-400: hsl(var(--info-hue) var(--info-saturation) 40%);
+   --info-500: hsl(var(--info-hue) var(--info-saturation) 50%);
+   --info-600: hsl(var(--info-hue) var(--info-saturation) 60%);
+   --info-700: hsl(var(--info-hue) var(--info-saturation) 70%);
+   --info-800: hsl(var(--info-hue) var(--info-saturation) 80%);
+   --info-900: hsl(var(--info-hue) var(--info-saturation) 90%);
+  
+   /* Success */
+   --success-hue: 93;
+   --success-saturation: 100;
+   --success-lightness: 73;
+   --success-hsl: hsl(var(--success-hue) var(--success-saturation) var(--success-lightness));
+ 
+   --clr-success-base:: var(--success-hsl);
+   --success-100: hsl(var(--success-hue) var(--success-saturation) 10%);
+   --success-200: hsl(var(--success-hue) var(--success-saturation) 20%);
+   --success-300: hsl(var(--success-hue) var(--success-saturation) 30%);
+   --success-400: hsl(var(--success-hue) var(--success-saturation) 40%);
+   --success-500: hsl(var(--success-hue) var(--success-saturation) 50%);
+   --success-600: hsl(var(--success-hue) var(--success-saturation) 60%);
+   --success-700: hsl(var(--success-hue) var(--success-saturation) 70%);
+   --success-800: hsl(var(--success-hue) var(--success-saturation) 80%);
+   --success-900: hsl(var(--success-hue) var(--success-saturation) 90%);
+  
+   /* Danger */
+   --danger-hue: 0;
+   --danger-saturation: 100;
+   --danger-lightness: 66;
+   --danger-hsl: hsl(var(--danger-hue) var(--danger-saturation) var(--danger-lightness));
+ 
+   --clr-danger-base:: var(--danger-hsl);
+   --danger-100: hsl(var(--danger-hue) var(--danger-saturation) 10%);
+   --danger-200: hsl(var(--danger-hue) var(--danger-saturation) 20%);
+   --danger-300: hsl(var(--danger-hue) var(--danger-saturation) 30%);
+   --danger-400: hsl(var(--danger-hue) var(--danger-saturation) 40%);
+   --danger-500: hsl(var(--danger-hue) var(--danger-saturation) 50%);
+   --danger-600: hsl(var(--danger-hue) var(--danger-saturation) 60%);
+   --danger-700: hsl(var(--danger-hue) var(--danger-saturation) 70%);
+   --danger-800: hsl(var(--danger-hue) var(--danger-saturation) 80%);
+   --danger-900: hsl(var(--danger-hue) var(--danger-saturation) 90%);
+  
+   /* Warning */
+   --warning-hue: 33;
+   --warning-saturation: 100;
+   --warning-lightness: 73;
+   --warning-hsl: hsl(var(--warning-hue) var(--warning-saturation) var(--warning-lightness));
+ 
+   --clr-warning-base:: var(--warning-hsl);
+   --warning-100: hsl(var(--warning-hue) var(--warning-saturation) 10%);
+   --warning-200: hsl(var(--warning-hue) var(--warning-saturation) 20%);
+   --warning-300: hsl(var(--warning-hue) var(--warning-saturation) 30%);
+   --warning-400: hsl(var(--warning-hue) var(--warning-saturation) 40%);
+   --warning-500: hsl(var(--warning-hue) var(--warning-saturation) 50%);
+   --warning-600: hsl(var(--warning-hue) var(--warning-saturation) 60%);
+   --warning-700: hsl(var(--warning-hue) var(--warning-saturation) 70%);
+   --warning-800: hsl(var(--warning-hue) var(--warning-saturation) 80%);
+   --warning-900: hsl(var(--warning-hue) var(--warning-saturation) 90%);
+   
+  /* Semantic colours */
+  --site-color: var(--primary-hsl);
+  --site-hover-color: var(--primary-400);
+  --seccondary-site-color: var(--seccondary-hsl);
+  --seccondary-site-hover-color: var(--seccondary-400);
+  
+  --black: hsl(var(--primary-hue) var(--primary-lightness) 5%);
+  --white: hsl(var(--primary-hue) var(--primary-saturation) 95%);
+
+  --text-color: var(--black);
+  --body-color: var(--white);
+
+  /* =====
+  TYPOGRAPHY
+  =====*/
+
+  /* Font sizes */
+  --fs-h1: clamp(2.206rem, 1.165vw + 1.833rem, 3.4247rem);
+  --fs-h2: clamp(2.207rem, 1.164vw + 1.834rem, 3.4247rem);
+  --fs-h3: clamp(2.207rem, 0.651vw + 1.999rem, 2.8868rem);
+  --fs-h4: clamp(1.4247rem, 0.818vw + 1.163rem, 2.2806rem);
+  --fs-h5: clamp(1.2656rem, 0.512vw + 1.102rem, 1.801rem);
+  --fs-h6: clamp(1.1125rem, 0.467vw + 0.963rem, 1.6013rem);
+  --fs-links: clamp(1rem, 0.215vw + 1.306rem, 1.6rem);
+  --fs-p: clamp(1rem, 0.299vw + 0.904rem, 1.3125rem);
+
+  /* Linre heights */
+  --lh-p: clamp(1rem, 0.956vw + 0.694rem, 2rem);
+  --lh-headinsgs: clamp(2rem, 1.912vw + 1.388rem, 4rem);
+  
+  /* Fonts */
+  --ff-body: 'Outfit', sans-serif;
+  --ff-headings: 'Outfit', sans-serif;
+
+  /* Weights -- You will want to remove some of these utilities based on what font setup your project is using */
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+
+  /* =====
+  SPACING ANDC LAYOUT
+  =====*/
+
+  /* General Spacer Tokens */
+  --sp-50: .5rem;
+  --sp-100: 1rem;
+  --sp-150: 1.5rem;
+  --sp-200: 2rem;
+  --sp-250: 2.5rem;
+  --sp-300: 3rem;
+  --sp-350: 3.5rem;
+  --sp-400: 4rem;
+  --sp-450: 4.5rem;
+  --sp-500: 5rem;
+  --sp-550: 5.5rem;
+  --sp-600: 6rem;
+  --sp-650: 6.5rem;
+
+  /* Section Padding */
+  --section-padding-xs: clamp(0.5rem, 0.478vw + 0.347rem, 1rem);
+  --section-padding-sm: clamp(1rem, 0.956vw + 0.694rem, 2rem);
+  --section-padding-md: clamp(2rem, 1.912vw + 1.388rem, 4rem);
+  --section-padding-lg: clamp(2.5rem, 2.39vw + 1.735rem, 5rem);
+  --section-padding-xl: clamp(6rem, -2.868vw + 6.918rem, 6rem);
+
+  /* Gaps */
+  --gap-sm: clamp(0.5rem, 0.478vw + 0.347rem, 1rem);
+  --gap-md: clamp(1.5rem, 0.478vw + 1.347rem, 2rem);
+  --gap-lg: clamp(1.5rem, 1.912vw + 0.888rem, 3.5rem);
+  --gap-xl: clamp(2rem, 1.912vw + 1.388rem, 4rem);
+
+  --card-gap: var(--gap-md);
+  --grid-gap: var(--gap-md);
+  --content-gap: var(--gap-sm);
+
+  /* Grid templates */
+  --grid-2: repeat(auto-fit, minmax(500px, 2fr));
+  --grid-3: repeat(auto-fit, minmax(333px, 3fr));
+  --grid-4: repeat(auto-fit, minmax(250px, 4fr));
+  --grid-5: repeat(auto-fit, minmax(200px, 5fr));
+
+  /* Border Radius  */
+  --radius-sm: var(--sp-50);
+  --radius-md: var(--sp-100);
+  --radius-lg: var(--sp-200);
+  --radius-xl: var(--sp-400);
+  --radius-circle: 2000%;
+
+  /* Widths */
+  --width-250: 25%;
+  --width-500: 50%;
+  --width-700: 75%
+
+}
+
+/* Classes -- not every prop will get its own utility class. We only offer classes that would benefit you in building sites faster with best practices in mind */
+
+/* Accessibility  */
+.skip-to-main {
+  position: absolute;
+  z-index: 999;
+  left: -9999px;
+  opacity: 0;
+  padding: var(--sp-100);
+  background-color: var(--site-color);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  border: 0;
+
+  &:hover {
+    background-color: var(--site-hover-color);
+  }
+}
+.skip-to-main:focus {
+  left: 8%;
+  margin: var(--sp-100);
+  transform: translateX(-50%);
+  opacity: 1;
+}
+/* Screen reader only class  */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  /* Contaner */
+  .container {
+    --standard-site-width: 72.5rem;
+    width: min(var(--standard-site-width), 100% - 4rem);
+    margin: auto;
+}
+.container__narrow {
+  --narrow-site-width: 55rem;
+  width: min(var(--narrow-site-width), 100% - 4rem);
+  margin: auto;
+}
+
+/* Grids */
+
+.grid-2 {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: var(--grid-2);
+}
+.grid-3 {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: var(--grid-3)
+}
+.grid-4 {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: var(--grid-4);
+}
+.grid-5 {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: var(--grid-5);
+}
+
+/* Flow */
+.grid-flow {
+  display: grid;
+  gap: var(--grid-flow-gap, 1rem);
+
+  > * {
+      margin: 0   ;
+  }
+}
+
+/* grid auto fit */
+.grid-auto-fit {
+  --grid-auto-fit-min-column-size: 200px;
+  --grid-auto-fit-gap: 1rem;
+
+  display: grid;
+  gap: var(--grid-auto-fit-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--grid-auto-fit-min-column-size), 100%), 1fr)
+  );
+}
+
+/* Flex Stuff */
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fg-row-gap, --sp-50), var(--fg-row-col-gap, --sp-100);
+  gap: var(--fg-align, center);
+  justify-content: var(--fg-justify, start);
+}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-gap);
+}
+
+/* Grid */
+.grid-stack {
+  display: grid;
+  gap: var(--content-gap);
+}

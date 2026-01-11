@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Intro to Sass</title>
+</head>
+<body>
+    <!-- 
+        === readme ===
+
+        Roles
+        Shaye 
+            Link gathering 
+            Web page copy 
+            Screenshots
+            Video production 
+
+        McLean 
+            Development of demo theme
+            Pictures 
+            Primary web producer 
+            Asset collection 
+
+        Asset credits 
+            Hero - https://unsplash.com/photos/programming-language-6JVlSdgMacE
+            Efficiency - https://unsplash.com/photos/a-blue-alarm-clock-with-a-yellow-face-Z_e8CTGUd2o
+            Reusability - https://unsplash.com/photos/the-word-recycle-written-in-wood-type-BO5cEROOSo0
+            Maintainability - https://unsplash.com/photos/person-using-macbook-pro-on-brown-wooden-table-yVxUC9I9Cik
+    -->
+    <main>
+        <!-- hero -->
+            <section class="hero">
+                <div class="container">
+                <div class="hero__grid">
+                    <div class="grid-stack hero__content">
+                        <h1 class="hero__headline">Write CSS Smarter</h1>
+                        <p class="hero__lead">Welcome to McLean and Shaye’s super fun CSS Technique Activity! We decided to focus on the CSS preprocessor SCSS because it's so fun and helps make website development consistent. Exploring SCSS was a fun time, and it was fun to work together and learn something new.</p>
+                        <a href="#vid" class="btn">Watch the Video!</a>
+                    </div> <!-- end of hero conent -->
+
+                    <figure class="hero__media">
+                        <img src="img/hero.jpg" alt="An example of some SCSS code">
+                    </figure>
+                </div> <!-- end of hero grid -->
+            </div> <!-- end of container -->
+        </section>
+
+        <section class="vid" id="vid">
+            <div class="container">
+                <h2 class="vid__title">Dive Straight In</h2>
+                <p class="vid__lead">This is our video tutorial where we'll teach you how to learn SCSS too! Join us as we show and discuss the power of this preprocessor, specifically discussing how to use variables and mixins. We'll show you how these features can make your CSS more efficient and maintainable, so you can build consistent and stylish websites!</p>
+                <iframe width="560" height="315" class="vid__player" src="https://www.youtube.com/embed/mOJnVh0s6N4?si=MqwXtTj71p9J1m1Y" title="Our SCSS Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a href="sass-demo-mats.zip" title="You are about to download a zip file of 2.930KB" class="btn vid__btn">Download The Starter Theme</a>
+            </div>
+        </section>
+
+        <!-- Links -->
+         <section class="links">
+            <div class="container">
+                <h2 class="links__heading">Some Helpful Links</h2>
+
+                <div class="link-grid">
+                    <article class="link">
+                        <figure class="link__thumb">
+                            <img src="img/link1.png" alt="A screenshot preview of link 1">
+                        </figure>
+                        <h3 class="link__title">10 Awesome SASS (SCSS) Mixins</h3>
+                        <p class="link__body">This page covers 10 useful SCSS mixins that can simplify and enhance your CSS coding. These mixins range from basic uses like setting width and height, to more complex functions like creating flexbox layouts, managing font properties, and handling responsive design. The article provides examples and explanations for each mixin, demonstrating how they can make your stylesheets more efficient and maintainable.</p>
+                        <a href="https://dev.to/alemesa/10-awesome-sass-scss-mixins-5ci2" target="_blank" title="Visit the URL for this resource" class="btn link__link">Visit Site</a>
+                    </article>
+                    <article class="link">
+                        <figure class="link__thumb">
+                            <img src="img/link2.png" alt="A screenshot preview of link 2">
+                        </figure>
+                        <h3 class="link__title">10 Awesome SASS (SCSS) Mixins</h3>
+                        <p class="link__body">This page provides a clear comparison between SCSS and Sass, two popular CSS preprocessors. It focuses on the differences in their syntax, highlighting that SCSS uses a syntax similar to standard CSS with curly braces and semicolons, while Sass employs an indented syntax without these elements. SCSS is easier for people to adapt to after using CSS the SASS because of the unusual syntax it uses. </p>
+                        <a href="https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/" target="_blank" title="Visit the URL for this resource" class="btn link__link">Visit Site</a>
+                    </article>
+                    <article class="link">
+                        <figure class="link__thumb">
+                            <img src="img/link3.png" alt="A screenshot preview of link 3">
+                        </figure>
+                        <h3 class="link__title">SASS Syntax Guide</h3>
+                        <p class="link__body">This page covers 10 useful SCSS mixins that can simplify and enhance your CSS coding. These mixins range from basic uses like setting width and height, to more complex functions like creating flexbox layouts, managing font properties, and handling responsive design. The article provides examples and explanations for each mixin, demonstrating how they can make your stylesheets more efficient and maintainable.</p>
+                        <a href="https://sass-lang.com/documentation/syntax/" target="_blank" title="Visit the URL for this resource" class="btn link__link">Visit Site</a>
+                    </article>
+                    <article class="link">
+                        <figure class="link__thumb">
+                            <img src="img/link4.png" alt="A screenshot preview of link 4">
+                        </figure>
+                        <h3 class="link__title">SCSS Introduction</h3>
+                        <p class="link__body">This page from W3Schools introduces SASS and shows it using the syntax from SCSS. W3Schools is a great site to gather coding information from and to use in your toolbox. This page also mentions how this preprocessor works and why it’s helpful to use. Information about who designed SCSS and when. </p>
+                        <a href="https://www.w3schools.com/sass/sass_intro.asp" target="_blank" title="Visit the URL for this resource" class="btn link__link">Visit Site</a>
+                    </article>
+                    <article class="link">
+                        <figure class="link__thumb">
+                            <img src="img/link5.png" alt="A screenshot preview of link 1">
+                        </figure>
+                        <h3 class="link__title">SCSS vs CSS: Which One Should You Use for Your Next Web Project?</h3>
+                        <p class="link__body">This page discusses the differences between CSS and SCSS, explaining that CSS is a stylesheet language while SCSS is a preprocessor scripting language that extends CSS. SCSS has features like variables, nesting, and mixins to make stylesheets more maintainable and efficient. This page is a great introductory source for someone who is getting into SCSS. </p>
+                        <a href="https://anantraghuvanshi.hashnode.dev/scss-vs-css-which-one-should-you-use-for-your-next-web-project" target="_blank" title="Visit the URL for this resource" class="btn link__link">Visit Site</a>
+                    </article>
+                </div>
+            </div>
+         </section>
+         <!-- benefits  -->
+          <section class="benefits">
+            <div class="container">
+                <h2 class="benefits__title">Why Sass?</h2>
+
+                <div class="benefits__listing">
+                    <article class="benefit">
+                        <div class="benefit__text">
+                            <h3 class="benefit__title">Efficiency</h3>
+                            <p class="benefit__lead">SCSS contributes to efficiency in several ways. The biggest being the use of variables, because it allows you to store values such as colors and font sizes and repeatedly reuse them throughout your code without having to continuously type the same values. It also enables nesting which lets you write CSS rules that mirror your html structure making the code more organized and understandable creating more efficient coding. Another large contributor to efficiency is mixins, which allow you to create reusable blocks of CSS code. </p>
+                        </div> <!-- end of content -->
+                        <figure class="benefit__image"><img src="img/efficiently.jpg" alt="a clock on a Blue background - yellow bells at the corners"></figure>
+                    </article>
+                    <article class="benefit">
+                        <div class="benefit__text">
+                            <h3 class="benefit__title">Reusability</h3>
+                            <p class="benefit__lead">SSCSS contributes to reusability in similar ways as efficiency. The use of mixins and variables both create the opportunity for coders to not have the need to repeat redundant code. The use of reusing CSS code through mixins prevents the need to rewrite the same styles repeatedly, and the use of variables enables the reuse of values such as colors and sizes. The use of variables also ensures consistency throughout the code. </p>
+                        </div> <!-- end of content -->
+                        <figure class="benefit__image"><img src="img/reuse.jpg" alt="The word 'recycle'written in a gold font hosted on a mahogany wood table surface. Sun is starting to come in"></figure>
+                    </article>
+                    <article class="benefit">
+                        <div class="benefit__text">
+                            <h3 class="benefit__title">Maintainability</h3>
+                            <p class="benefit__lead">SCSS improves code maintainability by providing features that make stylesheets easier to manage. SCSS allows you to organize your code into separate and smaller files then CSS making it easier to find and change specific styles. The use of variables ensures that if a value needs to be changed, it only needs to be updated in one place, rather than throughout the entire stylesheet, reducing inconsistencies.</p>
+                        </div> <!-- end of content -->
+                        <figure class="benefit__image"><img src="img/maintain.jpg" alt="a web producer working on a large website codebase"></figure>
+                    </article>
+                </div> <!-- end of listing -->
+            </div> <!-- end of container -->
+          </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="site-footer-copyright">Copyright &copy; Shaye and Mac Productions</p>
+        </div>
+    </footer>
+</body>
+</html>
